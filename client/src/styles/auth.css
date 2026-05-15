@@ -1,0 +1,174 @@
+/*Login */
+
+/* Page background */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+}
+
+/* Card */
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px; 
+  padding: 32px;
+  border-radius: 18px;
+}
+
+/* Titles */
+.auth-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Labels */
+.auth-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+/* Inputs */
+.auth-input {
+  width: 100%;
+  height: 48px;                 
+  padding-left: 44px;           
+  padding-right: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  box-sizing: border-box;      
+  line-height: normal;         
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #ffffff;
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  opacity: 0.95;
+}
+    
+/* Footer link */
+.auth-link {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #4f46e5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+
+/* Sign Up */
+.auth-label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #374151;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.auth-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin: 12px 0 18px;
+}
+
+.auth-row a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.auth-row a:hover {
+  text-decoration: underline;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.auth-logo {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.auth-app-name {
+  font-family: 'Agbalumo', system-ui;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 0;
+  color: #000000;
+}
+
+.auth-tagline {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.auth-footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+.auth-footer a {
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+

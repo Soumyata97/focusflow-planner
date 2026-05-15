@@ -1,0 +1,176 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* The app shell controls all scrolling */
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*  Pomodoro Toggle Switch  */
+.qs-toggle-wrap {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.qs-toggle-wrap input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.qs-slider {
+  position: absolute;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.35s;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.qs-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.35s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.qs-toggle-wrap input:checked ~ .qs-slider {
+  background-color: #6c5ce7;
+}
+
+.qs-toggle-wrap input:checked ~ .qs-slider::before {
+  transform: translateX(20px);
+}
+
+/*  Premium UI Elements  */
+.premium-dropdown {
+  padding: 8px 30px 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 11px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.premium-dropdown:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.premium-dropdown:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108,92,231,0.1);
+}
+
+.premium-button {
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(108,92,231,0.15);
+  transition: all 0.2s ease;
+}
+
+.premium-button:hover {
+  background: #5b4cc4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(108,92,231,0.25);
+}
+
+.premium-button:active {
+  transform: translateY(0);
+}
+
+/*  Animations  */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/*  Global Dark Mode via CSS Filter Overrides  */
+body[data-theme="dark"] {
+  filter: invert(0.92) hue-rotate(180deg);
+  background-color: #121212;
+}
+
+body[data-theme="dark"] img,
+body[data-theme="dark"] video,
+body[data-theme="dark"] canvas,
+body[data-theme="dark"] .recharts-surface,
+body[data-theme="dark"] .recharts-legend-item-text,
+body[data-theme="dark"] .recharts-tooltip-wrapper,
+body[data-theme="dark"] .reactEasyCrop_Container {
+
+  filter: invert(1) hue-rotate(180deg);
+}
+
+
+html[data-theme="dark"] {
+  background-color: #1a1a1a;
+}
+
